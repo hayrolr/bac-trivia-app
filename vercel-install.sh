@@ -4,11 +4,9 @@
 set -e
 
 echo "Vercel Install Script: Started"
-
-# 1. Update package list and install system dependencies for node-canvas
-# The '-y' flag automatically answers 'yes' to any installation prompts.
-echo "Vercel Install Script: Installing system dependencies for node-canvas..."
-apt-get update && apt-get install -y build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+echo "Vercel Install Script: Installing system dependencies for node-canvas using YUM..."
+# 1. Use YUM to install system dependencies for node-canvas on Amazon Linux 2
+yum install -y cairo-devel libjpeg-turbo-devel pango-devel giflib-devel librsvg2-devel
 echo "Vercel Install Script: System dependencies installed successfully."
 
 # 2. Proceed with the standard npm installation
