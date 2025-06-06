@@ -18,6 +18,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+            <title>BAC Trivia</title>
+        </head>
         <body className={inter.className}>
             {/* Aquí se puede añadir un Navbar/Header/Footer global en caso de ser necesario */}
             <main className="min-h-screen bg-gray-100"> {/* Fondo base */}
